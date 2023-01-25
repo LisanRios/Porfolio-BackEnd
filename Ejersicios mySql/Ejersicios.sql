@@ -42,11 +42,46 @@ select saldo, sexo, nombre from usuarios where sexo = 'M' order by sexo, saldo a
 #3
 select nombre, telefono, marca from Usuarios where marca in ('SONY','BLACKBERRY','NOKIA');
 #4
-
-
-
-
-
-
-
+SELECT nombre, saldo, activo FROM Usuarios WHERE saldo=0 OR activo='0';
+#5
+SELECT usuario, nivel FROM Usuarios WHERE nivel IN ('1','2','3');
+#6
+SELECT telefono, saldo FROM Usuarios WHERE saldo <= 300;
+#7
+SELECT SUM(saldo) , compania FROM Usuarios WHERE compania = 'NEXTEL';
+#8
+SELECT COUNT(usuario), compania FROM Usuarios group by compania;
+#9
+SELECT COUNT(usuario), nivel FROM Usuarios group by nivel;
+#10
+SELECT COUNT(usuario), nivel FROM Usuarios WHERE nivel='2' group by nivel;
+#11
+SELECT usuario, email FROM Usuarios WHERE email like '%@gmail.com';
+#12
+select nombre, telefono, marca from Usuarios where marca in ('LG','SAMSUNG','MOTOROLA');
+#13
+select nombre, telefono, marca from Usuarios where marca NOT in ('LG','SAMSUNG');
+#14
+SELECT usuario, telefono, compania FROM Usuarios WHERE compania = 'IUSACELL';
+#15
+SELECT usuario, telefono, compania FROM Usuarios WHERE compania != 'TELCEL';
+#16
+SELECT AVG(saldo), marca FROM Usuarios where marca = 'NOKIA';
+#17
+select usuario, telefono, compania from Usuarios where compania in ('IUSACELL','AXEL');
+#18 
+SELECT usuario, email FROM Usuarios where email NOT like '%@yahoo.com';
+#19
+select usuario, telefono, compania from Usuarios where compania NOT in ('TELCEL','IUSACELL');
+#20 
+select usuario, telefono, compania from Usuarios where compania in ('UNEFON');
+#21
+SELECT DISTINCT marca FROM Usuarios order by marca asc;
+#22
+SELECT DISTINCT compania FROM Usuarios order by RAND();
+#23
+SELECT usuario, nivel FROM Usuarios where nivel in ('0','2');
+#24
+SELECT AVG(saldo), marca FROM Usuarios where marca = 'LG';
+#25
 
