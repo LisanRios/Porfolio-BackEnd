@@ -42,3 +42,17 @@
   values ('Ramos Betina', 'San Martin 999', 'Cordoba',1,'4223366');
  insert into clientes (nombre,domicilio,ciudad,codigoProvincia,telefono)
   values ('Lopez Lucas', 'San Martin 1010', 'Posadas',4,'0457858745');
+
+#1
+SELECT DISTINCT clientes.codigoProvincia, provincias.codigo, provincias.nombre
+FROM clientes 
+RIGHT JOIN provincias 
+ON clientes.codigoProvincia = provincias.codigo
+WHERE codigoProvincia is NULL;
+
+#2
+SELECT DISTINCT clientes.codigoProvincia, provincias.codigo, provincias.nombre
+FROM clientes 
+INNER JOIN provincias 
+ON clientes.codigoProvincia = provincias.codigo;
+
