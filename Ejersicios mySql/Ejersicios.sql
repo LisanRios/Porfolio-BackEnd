@@ -8,7 +8,7 @@ CREATE TABLE Usuarios (
    telefono VARCHAR(20),
    marca VARCHAR(20),
    compania VARCHAR(20),
-   saldo FLOAT,
+   saldo FLOAT,clientes
    activo BOOLEAN
 );
 
@@ -84,4 +84,54 @@ SELECT usuario, nivel FROM Usuarios where nivel in ('0','2');
 #24
 SELECT AVG(saldo), marca FROM Usuarios where marca = 'LG';
 #25
+SELECT usuario, nivel FROM Usuarios where nivel in ('1','3');
+#26
+SELECT nombre, usuario, telefono, marca from Usuarios where marca NOT in ('BLACKBERRY');
+#27
+SELECT usuario , nivel FROM Usuarios WHERE nivel = '3';
+#28
+SELECT usuario , nivel FROM Usuarios WHERE nivel = '0';
+#29
+SELECT usuario , nivel FROM Usuarios WHERE nivel = '1';
+#30
+SELECT COUNT(usuario), sexo FROM Usuarios GROUP BY sexo; 
+#31
+select usuario, telefono, compania from Usuarios where compania in ('AT&T');
+#32
+SELECT DISTINCT compania FROM Usuarios ORDER BY compania ASC; 
+#33
+SELECT usuario, activo FROM Usuarios WHERE activo='0';
+#34
+SELECT telefono, saldo FROM usuarios WHERE saldo='0';
+#35
+SELECT MIN(saldo), sexo FROM usuarios WHERE sexo='H';
+#36
+SELECT telefono, saldo FROM usuarios WHERE saldo > '300';
+#37
+SELECT COUNT(usuario), marca FROM usuarios GROUP BY marca;
+#38
+SELECT nombre, telefono, marca FROM usuarios WHERE marca <> 'LG';
+#39
+SELECT DISTINCT compania FROM Usuarios ORDER BY compania DESC;
+#40
+SELECT SUM(saldo), compania FROM usuarios WHERE compania ='UNEFON';
+#41
+SELECT usuario, email FROM usuarios WHERE email LIKE '%hotmail.com';
+#42
+SELECT nombre, saldo, activo FROM usuarios WHERE activo = '0' || saldo = '0'; 
+#43
+SELECT usuario, telefono, compania FROM usuarios WHERE compania in ('IUSACELL','TELCEL');
+#44
+SELECT DISTINCT marca FROM Usuarios ORDER BY marca DESC;
+#45
+SELECT DISTINCT marca FROM Usuarios ORDER BY RAND();
+#46
+SELECT usuario, telefono, compania FROM usuarios WHERE compania in ('IUSACELL','UNEFON');
+#47
+SELECT nombre, telefono, marca FROM usuarios WHERE marca NOT in ('MOTOROLA','NOKIA');
+#48
+SELECT SUM(saldo), compania FROM usuarios WHERE compania ='TELCEL';
+
+
+
 
