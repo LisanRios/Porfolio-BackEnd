@@ -1,0 +1,7 @@
+com\LisandroRios\porfolioweb\repository\PersonaRepository.class
+com\LisandroRios\porfolioweb\PorfoliowebApplication.class
+com\LisandroRios\porfolioweb\controller\PersonaController.class
+com\LisandroRios\porfolioweb\model\Persona.class
+WebConfig.class
+com\LisandroRios\porfolioweb\service\IPersonaService.class
+com\LisandroRios\porfolioweb\service\PersonaService.class
