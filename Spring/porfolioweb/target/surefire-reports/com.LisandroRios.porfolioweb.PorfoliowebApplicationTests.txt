@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.LisandroRios.porfolioweb.PorfoliowebApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.095 s - in com.LisandroRios.porfolioweb.PorfoliowebApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.57 s - in com.LisandroRios.porfolioweb.PorfoliowebApplicationTests
